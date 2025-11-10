@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-/* --- Conteneurs généraux --- */
+/*  Conteneurs généraux  */
 .conteneur {
     width: 100%;
     position: relative;
@@ -18,7 +18,7 @@
     height: 150vh;
 }
 
-/* --- HEADER FIXE --- */
+/*  HEADER FIXE  */
 .premier {
     width: 100%;
     height: 100px;
@@ -32,12 +32,12 @@
     z-index: 1000;
 }
 
-/* ✅ Décale le contenu pour ne pas passer sous le header */
+/* Décale le contenu pour ne pas passer sous le header */
 body {
     padding-top: 100px;
 }
 
-/* --- Structure du header --- */
+/*  Structure du header  */
 .second {
     width: 100%;
     height: 15vh;
@@ -106,7 +106,7 @@ body {
     background-size: cover;
 }
 
-/* --- Section Menu --- */
+/*  Section Menu  */
 .menu {
     height: 800px;
     width: 100%;
@@ -136,10 +136,10 @@ body {
     align-items: center;
 }
 
-/* === ✅ Uniformisation des photos des plats === */
+/*  Uniformisation des photos des plats  */
 .contain .photo {
   width: 100%;
-  height: 250px; /* même taille pour toutes les images */
+  height: 250px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -149,12 +149,12 @@ body {
 .contain_picture {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* pas de déformation */
+  object-fit: cover;
   display: block;
   border-radius: 8px;
 }
-/* === Fin uniformisation === */
 
+/* Description des plats */
 .contain .description {
     width: 190px;
     margin-top: 10px;
@@ -170,7 +170,7 @@ body {
     font-weight: bold;
 }
 
-/* --- Section MENU titre --- */
+/* Section MENU titre */
 #sekongo {
     height: 50px;
     display: flex;
@@ -190,7 +190,7 @@ body {
     color: #faf9f6;
 }
 
-/* --- Section A PROPOS --- */
+/*  Section A PROPOS  */
 #ami {
     height: 50px;
     display: flex;
@@ -224,9 +224,16 @@ body {
 }
 
 .ami-image {
-    flex-direction: row-reverse;
     flex: 1;
     min-width: 300px;
+}
+
+.ami-image img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
 }
 
 .ami-text {
@@ -240,19 +247,15 @@ body {
     color: #ca5609;
     font-size: 1.8rem;
     margin-bottom: 15px;
-    position: relative;
-    top: -100px;
 }
 
 .ami-text h3 {
     color: #ffc300;
     font-size: 1.8rem;
     margin-bottom: 15px;
-    position: relative;
-    top: 100px;
 }
 
-/* --- Style pour description image --- */
+/*  Style pour description image  */
 .contain {
   width: 300px;
   position: relative;
@@ -285,8 +288,8 @@ body {
   margin: 0;
 }
 
-/* Section Réservation */
-#noura{
+/* Section Commande */
+#noura {
   padding: 60px 20px;
   background-color: #fff8f0;
   text-align: center;
@@ -338,7 +341,7 @@ body {
   min-height: 80px;
 }
 
-.btn-reserve {
+.btn-commande {
   background-color: #e67e22;
   color: white;
   padding: 12px 25px;
@@ -349,10 +352,11 @@ body {
   transition: background-color 0.3s;
 }
 
-.btn-reserve:hover {
+.btn-commande:hover {
   background-color: #d35400;
 }
 
+/*  Responsive  */
 @media (max-width: 768px) {
     /* Header */
     .trois1, .trois2 { width: 100%; text-align: center; }
@@ -372,5 +376,27 @@ body {
     .noura-form input,
     .noura-form select,
     .noura-form textarea,
-    .btn-reserve { width: 100%; }
+    .btn-commande { width: 100%; }
+}
+/*  Message de confirmation  */
+#confirmation-message {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1a1a1a;
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: none; /* Caché au début */
+}
+
+#confirmation-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+#confirmation-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
 }
