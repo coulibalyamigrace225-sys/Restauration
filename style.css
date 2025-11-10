@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Conteneurs généraux --- */
+.conteneur {
+    width: 100%;
+    position: relative;
+    height: 200vh;
+}
+
+.first {
+    width: 90%;
+    position: relative;
+    display: block;
+    margin-left: 70px;
+    height: 150vh;
+}
+
+/* --- HEADER FIXE --- */
+.premier {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    background-color: #a85405;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* ✅ Décale le contenu pour ne pas passer sous le header */
+body {
+    padding-top: 100px;
+}
+
+/* --- Structure du header --- */
+.second {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trois1 {
+    width: 500px;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.trois1 h1 {
+    color: aliceblue;
+}
+
+.trois2 {
+    width: 1000px;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trois2 ul {
+    display: flex;
+    justify-content: center;
+}
+
+.trois2 ul li {
+    list-style: none;
+    margin: 10px;
+}
+
+.orange {
+    color: hsl(30, 50%, 98%);
+}
+
+.trois2 ul li a {
+    text-decoration: none;
+    color: hsl(0, 40%, 98%);
+}
+
+.trois2 ul li a:hover {
+    color: rgb(21, 22, 22);
+}
+
+/* --- Section arrière-plan --- */
+.arrièrePlan {
+    height: 500px;
+    display: flex;
+    background-image: url(images/arriere\ plan.JPG);
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+}
+
+#image {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+}
+
+/* --- Section Menu --- */
+.menu {
+    height: 800px;
+    width: 100%;
+    display: flex;
+    margin-top: -40px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu_container1,
+.menu_container2 {
+    height: 300px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu_container1 .contain,
+.menu_container2 .contain {
+    height: 300px;
+    width: 300px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* === ✅ Uniformisation des photos des plats === */
+.contain .photo {
+  width: 100%;
+  height: 250px; /* même taille pour toutes les images */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain_picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* pas de déformation */
+  display: block;
+  border-radius: 8px;
+}
+/* === Fin uniformisation === */
+
+.contain .description {
+    width: 190px;
+    margin-top: 10px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contain .description .titre {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* --- Section MENU titre --- */
+#sekongo {
+    height: 50px;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: #a85405;
+}
+
+#sekongo p {
+    width: 100%;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a85405;
+    color: #faf9f6;
+}
+
+/* --- Section A PROPOS --- */
+#ami {
+    height: 50px;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+#ami p {
+    font-size: 35px;
+    font-weight: bold;
+    background-color: #a85405;
+    position: relative;
+    top: -50px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #faf9f6;
+}
+
+.ami-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+    text-align: left;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #faf9f6;
+}
+
+.ami-image {
+    flex-direction: row-reverse;
+    flex: 1;
+    min-width: 300px;
+}
+
+.ami-text {
+    flex: 1.5;
+    padding: 100px;
+    color: #1a1110;
+    font-size: 20px;
+}
+
+.ami-text h2 {
+    color: #ca5609;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    position: relative;
+    top: -100px;
+}
+
+.ami-text h3 {
+    color: #ffc300;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    position: relative;
+    top: 100px;
+}
+
+/* --- Style pour description image --- */
+.contain {
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.photo {
+  position: relative;
+}
+
+.description {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 0;
+}
+
+.titre {
+  font-size: 18px;
+  margin: 0;
+}
+
+.prix {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Section Réservation */
+#noura{
+  padding: 60px 20px;
+  background-color: #fff8f0;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.noura-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff3e0;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#noura h2 {
+  color: #d35400;
+  margin-bottom: 10px;
+}
+
+#noura p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.noura-form .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.noura-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.noura-form input,
+.noura-form select,
+.noura-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.noura-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.btn-reserve {
+  background-color: #e67e22;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.btn-reserve:hover {
+  background-color: #d35400;
+}

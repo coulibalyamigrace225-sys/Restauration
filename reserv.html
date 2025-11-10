@@ -1,0 +1,74 @@
+   <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réservation de nourriture</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="reservation-container">
+    <h2>Réservez votre repas 🍽️</h2>
+
+    <form action="#confirmation" method="get">
+      <label for="nom">Nom complet :</label>
+      <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required>
+
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" placeholder="exemple@email.com" required>
+
+      <label for="plat">Plat souhaité :</label>
+      <select id="plat" name="plat" required>
+        <option value="">-- Sélectionnez un plat --</option>
+        <option>Pizza Margherita</option>
+        <option>Burger maison</option>
+        <option>Poulet braisé</option>
+        <option>Poisson grillé</option>
+        <option>Salade César</option>
+      </select>
+
+      <div class="ligne">
+        <div>
+          <label for="date">Date :</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        <div>
+          <label for="heure">Heure :</label>
+          <input type="time" id="heure" name="heure" required>
+        </div>
+      </div>
+
+      <label for="personnes">Nombre de portions :</label>
+      <select id="personnes" name="personnes" required>
+        <option value="">-- Sélectionnez --</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4+</option>
+      </select>
+
+      <label for="service">Type de service :</label>
+      <select id="service" name="service" required>
+        <option value="">-- Choisissez --</option>
+        <option>Sur place</option>
+        <option>À emporter</option>
+        <option>Livraison</option>
+      </select>
+
+      <button type="submit">Confirmer la réservation</button>
+    </form>
+  </div>
+
+  <!-- ✅ Message de confirmation (caché par défaut) -->
+  <div id="confirmation" class="confirmation-message">
+    <h2>✅ Votre commande a bien été enregistrée !</h2>
+    <p>Merci pour votre confiance. Nous préparons votre repas avec soin 🍕</p>
+    <a href="#" class="btn-retour">← Retour au formulaire</a>
+  </div>
+
+</body>
+</html>
+
+  </body>
+</html>
