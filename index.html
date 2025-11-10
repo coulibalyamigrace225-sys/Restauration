@@ -1,187 +1,62 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>restauration</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-  </head>
+<section id="noura">
+  <div class="noura-container">
+    <h2>Commander votre plat</h2>
+    <p>Remplissez le formulaire ci-dessous pour commander votre repas.</p>
 
-  <body>
-    <!--  HEADER  -->
-    <div class="premier">
-      <div class="second">
-        <div class="trois1">
-          <h1>MIMI RESTAU <span class="orange">.</span></h1>
-        </div>
-        <div class="trois2">
-          <ul>
-            <li><a href="#">ACCUEIL</a></li>
-            <li><a href="#sekongo">MENU</a></li>
-            <li><a href="#ami">A PROPOS</a></li>
-            <li><a href="#noura">COMMANDER</a></li>
-          </ul>
-        </div>
+    <form class="noura-form">
+      <div class="form-group">
+        <label for="name">Nom complet</label>
+        <input type="text" id="name" name="name" placeholder="Votre nom" required>
       </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Votre email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Téléphone</label>
+        <input type="tel" id="phone" name="phone" placeholder="Votre numéro" required>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+
+      <div class="form-group">
+        <label for="time">Heure</label>
+        <input type="time" id="time" name="time" required>
+      </div>
+
+      <div class="form-group">
+        <label for="menu">Choisissez votre plat</label>
+        <select id="menu" name="menu" required>
+          <option value="">-- Sélectionnez un plat --</option>
+          <option value="tchep_poulet">Tchep poulet</option>
+          <option value="tchep_poisson">Tchep poisson</option>
+          <option value="tchep_viande">Tchep viande</option>
+          <option value="lak_onctueux">Lak Onctueux</option>
+          <option value="vermicelles">Vermicelles</option>
+          <option value="yassa">Yassa poulet</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="requests">Demandes spéciales</label>
+        <textarea id="requests" name="requests" placeholder="Ex : sans piment..."></textarea>
+      </div>
+
+      <button type="submit" class="btn-commande">Commander</button>
+    </form>
+
+    <!-- Message de confirmation -->
+    <div id="confirmation-message"></div>
+
+    <!-- Section pour afficher toutes les commandes -->
+    <div id="liste-commandes" style="margin-top:30px;">
+      <h3>Commandes enregistrées :</h3>
+      <ul id="commandes-ul" style="list-style:none; padding-left:0;"></ul>
     </div>
-
-    <!--  ARRIERE-PLAN  -->
-    <div class="arrièrePlan">
-      <div class="message"></div>
-    </div>
-
-    <!--  MENU -->
-    <div id="sekongo"><p>MENU</p></div>
-
-    <div class="menu">
-      <div class="menu_container1">
-        <div class="contain">
-          <div class="photo">
-            <img src="images/poulet.jpg" class="contain_picture" alt="Tchep Poulet" />
-            <div class="description">
-              <p class="titre">TCHEP POULET</p>
-              <p class="prix">2000F</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="contain">
-          <div class="photo">
-            <img src="images/poisson.jpg" class="contain_picture" alt="Tchep Poisson" />
-            <div class="description">
-              <p class="titre">TCHEP POISSON</p>
-              <p class="prix">2000F</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="contain">
-          <div class="photo">
-            <img src="images/viande.jpg" class="contain_picture" alt="Tchep Viande" />
-            <div class="description">
-              <p class="titre">TCHEP VIANDE</p>
-              <p class="prix">2000F</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="menu_container2">
-        <div class="contain">
-          <div class="photo">
-            <img src="images/lak.jpg" class="contain_picture" alt="Lak Onctueux" />
-            <div class="description">
-              <p class="titre">LAK ONCTUEUX</p>
-              <p class="prix">2000F</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="contain">
-          <div class="photo">
-            <img src="images/vermicelles.jpg" class="contain_picture" alt="Vermicelles" />
-            <div class="description">
-              <p class="titre">VERMICELLES</p>
-              <p class="prix">2000F</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="contain">
-          <div class="photo">
-            <img src="images/yassa.jpg" class="contain_picture" alt="Yassa" />
-            <div class="description">
-              <p class="titre">YASSA</p>
-              <p class="prix">2000F</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--  A PROPOS  -->
-    <div id="ami"><p>A PROPOS</p></div>
-
-    <div class="ami-content">
-      <div class="ami-image">
-        <img src="images/CJJG2905.JPG" alt="Notre équipe ou plat signature" />
-      </div>
-      <div class="ami-text">
-        <h2>Mimi Restau — rien que la qualité.</h2>
-        <p>
-          Mimi Restau est une entreprise de restauration spécialisée dans la
-          préparation et la livraison de plats africains authentiques, revisités
-          avec une touche moderne. Notre mission est d’offrir à chacun une
-          expérience culinaire unique, alliant qualité, saveur et convivialité.
-        </p>
-        <p>
-          Notre objectif est simple : satisfaire nos clients en leur offrant le
-          meilleur de la cuisine africaine, où qu’ils soient.
-        </p>
-        <p>
-          Chez Mimi Restau, nous croyons que bien manger, c’est aussi bien
-          vivre. C’est pourquoi nous nous engageons à proposer des repas sains,
-          savoureux et préparés dans le respect des normes d’hygiène et de
-          qualité.
-        </p>
-        <h3>Plus qu'un restaurant, une passion</h3>
-      </div>
-    </div>
-
-    <!-- COMMANDE -->
-    <section id="noura">
-      <div class="noura-container">
-        <h2>Commander votre plat</h2>
-        <p>Remplissez le formulaire ci-dessous pour commander votre repas.</p>
-
-        <form class="noura-form">
-          <div class="form-group">
-            <label for="name">Nom complet</label>
-            <input type="text" id="name" name="name" placeholder="Votre nom" required>
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Votre email" required>
-          </div>
-
-          <div class="form-group">
-            <label for="phone">Téléphone</label>
-            <input type="tel" id="phone" name="phone" placeholder="Votre numéro" required>
-          </div>
-
-          <div class="form-group">
-            <label for="date">Date</label>
-            <input type="date" id="date" name="date" required>
-          </div>
-
-          <div class="form-group">
-            <label for="time">Heure</label>
-            <input type="time" id="time" name="time" required>
-          </div>
-
-          <div class="form-group">
-            <label for="menu">Choisissez votre plat</label>
-            <select id="menu" name="menu" required>
-              <option value="">-- Sélectionnez un plat --</option>
-              <option value="tchep_poulet">Tchep poulet</option>
-              <option value="tchep_poisson">Tchep poisson</option>
-              <option value="tchep_viande">Tchep viande</option>
-              <option value="lak_onctueux">Lak Onctueux</option>
-              <option value="vermicelles">Vermicelles</option>
-              <option value="yassa">Yassa poulet</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="requests">Demandes spéciales</label>
-            <textarea id="requests" name="requests" placeholder="Ex : sans piment..."></textarea>
-          </div>
-
-          <button type="submit" class="btn-commande">Commander</button>
-        </form>
-      </div>
-    </section>
-  </body>
-</html>
+  </div>
+</section>
