@@ -353,68 +353,24 @@ body {
   background-color: #d35400;
 }
 
-/* ===== Media queries pour mobile ===== */
 @media (max-width: 768px) {
+    /* Header */
+    .trois1, .trois2 { width: 100%; text-align: center; }
+    .trois2 ul { flex-direction: column; }
+    .trois2 ul li { margin: 5px 0; }
 
-  /* --- Header --- */
-  .trois1, .trois2 {
-    width: 100%;
-    text-align: center;
-  }
+    /* Menu */
+    .menu_container1, .menu_container2 { flex-direction: column; gap: 10px; }
+    .contain { flex: 1 1 100%; max-width: 100%; }
 
-  .trois2 ul {
-    flex-direction: column;
-    padding: 0;
-  }
+    /* Section A propos */
+    .ami-content { flex-direction: column; padding: 10px; text-align: center; }
+    .ami-text { padding: 20px; }
 
-  .trois2 ul li {
-    margin: 5px 0;
-  }
-
-  /* --- Menu --- */
-  .menu_container1,
-  .menu_container2 {
-    flex-direction: column;
-    height: auto;
-    width: 90%;
-  }
-
-  .contain {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .contain .photo {
-    height: 200px;
-  }
-
-  /* --- A propos --- */
-  .ami-content {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .ami-text {
-    padding: 20px;
-    text-align: center;
-  }
-
-  .ami-text h2, .ami-text h3 {
-    top: 0;
-    font-size: 1.5rem;
-  }
-
-  /* --- Formulaire Réservation --- */
-  .noura-container {
-    width: 95%;
-    padding: 20px;
-  }
-
-  .noura-form input,
-  .noura-form select,
-  .noura-form textarea,
-  .btn-reserve {
-    width: 100%;
-  }
+    /* Formulaire */
+    .noura-container { width: 95%; padding: 15px; }
+    .noura-form input,
+    .noura-form select,
+    .noura-form textarea,
+    .btn-reserve { width: 100%; }
 }
