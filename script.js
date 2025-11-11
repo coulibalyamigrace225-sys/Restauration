@@ -5,7 +5,6 @@ function envoyerWhatsApp() {
   const heure = document.getElementById("time").value;
   const demandes = document.getElementById("requests").value.trim();
 
-  // Récupère tous les plats cochés
   const plats = Array.from(document.querySelectorAll(".menu-item input:checked"))
     .map(p => p.value)
     .join(", ");
@@ -26,7 +25,7 @@ function envoyerWhatsApp() {
                   `────────────────────\n` +
                   `Merci pour votre confiance 💛`;
 
-  const numero = "2250709481800"; // Mets ton numéro WhatsApp ici
+  const numero = "225XXXXXXXX"; // Mets ton numéro WhatsApp ici
   const url = `https://wa.me/${numero}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
 }

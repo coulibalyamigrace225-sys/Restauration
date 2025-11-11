@@ -378,6 +378,7 @@ body {
     .noura-form textarea,
     .btn-commande { width: 100%; }
 }
+
 /* --- SECTION COMMANDE --- */
 #noura {
   background-color: #fffaf5;
@@ -387,7 +388,7 @@ body {
 }
 
 .commande-container {
-  max-width: 850px;
+  max-width: 700px;
   background: #fff;
   padding: 40px 30px;
   border-radius: 20px;
@@ -398,13 +399,13 @@ body {
   text-align: center;
   color: #d35400;
   margin-bottom: 10px;
-  font-size: 28px;
+  font-size: 26px;
 }
 
 .commande-container p {
   text-align: center;
   color: #666;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .commande-form {
@@ -442,76 +443,49 @@ textarea {
   resize: vertical;
 }
 
-/* --- MENU AVEC CASES À COCHER STYLÉES --- */
+/* --- MENU AVEC CASES À COCHER SIMPLES MAIS PROPRES --- */
 .menu-selection h3 {
   color: #d35400;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
 }
 
 .menu-item {
-  position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  cursor: pointer;
+  gap: 10px;
   border: 2px solid #eee;
-  border-radius: 15px;
-  overflow: hidden;
+  border-radius: 12px;
+  padding: 10px 15px;
+  background: #fafafa;
+  cursor: pointer;
   transition: all 0.3s ease;
-  background: #fff;
-}
-
-.menu-item input {
-  display: none;
-}
-
-.menu-image {
-  width: 100%;
-  height: 130px;
-  background-size: cover;
-  background-position: center;
-  border-bottom: 1px solid #eee;
-  transition: all 0.3s ease;
-}
-
-.menu-item span {
-  padding: 10px;
-  font-weight: 600;
-  color: #333;
-  text-align: center;
-}
-
-/* Effet quand coché */
-.menu-item input:checked + .menu-image {
-  filter: brightness(0.7);
-  position: relative;
-}
-
-.menu-item input:checked + .menu-image::after {
-  content: "✓";
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  font-size: 22px;
-  color: white;
-  background: #d35400;
-  border-radius: 50%;
-  padding: 4px 9px;
 }
 
 .menu-item:hover {
-  transform: scale(1.03);
+  background: #fff;
   border-color: #d35400;
-  box-shadow: 0 0 10px rgba(211,84,0,0.3);
+  transform: scale(1.02);
 }
 
+.menu-item input {
+  width: 18px;
+  height: 18px;
+  accent-color: #d35400;
+}
+
+.menu-item span {
+  font-weight: 500;
+  color: #333;
+}
+
+/* --- BOUTON --- */
 .btn-commande {
   background-color: #d35400;
   color: #fff;
@@ -534,4 +508,3 @@ textarea {
     flex-direction: column;
   }
 }
-
