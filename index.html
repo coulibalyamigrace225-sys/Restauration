@@ -129,7 +129,7 @@
       </div>
     </div>
     
-    <!-- COMMANDE -->
+        <!-- COMMANDE -->
 <section id="noura">
   <div class="noura-container">
     <h2>Commander votre plat</h2>
@@ -161,18 +161,17 @@
         <input type="time" id="time" name="time" required>
       </div>
 
-      <!-- Sélection multiple des plats ajoutée -->
+      <!-- Choix des plats avec checkboxes (plus pratique que select multiple) -->
       <div class="form-group">
-        <label for="menu">Choisissez vos plats</label>
-        <select id="menu" name="menu" multiple required>
-          <option value="tchep_poulet">Tchep poulet</option>
-          <option value="tchep_poisson">Tchep poisson</option>
-          <option value="tchep_viande">Tchep viande</option>
-          <option value="lak_onctueux">Lak Onctueux</option>
-          <option value="vermicelles">Vermicelles</option>
-          <option value="yassa">Yassa poulet</option>
-        </select>
-        <p><small>Maintenez Ctrl (Windows) ou Cmd (Mac) pour sélectionner plusieurs plats.</small></p>
+        <label>Choisissez vos plats</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="menu" value="tchep_poulet"> 🍗 Tchep Poulet</label>
+          <label><input type="checkbox" name="menu" value="tchep_poisson"> 🐟 Tchep Poisson</label>
+          <label><input type="checkbox" name="menu" value="tchep_viande"> 🥩 Tchep Viande</label>
+          <label><input type="checkbox" name="menu" value="lak_onctueux"> 🥣 Lak Onctueux</label>
+          <label><input type="checkbox" name="menu" value="vermicelles"> 🍜 Vermicelles</label>
+          <label><input type="checkbox" name="menu" value="yassa"> 🍛 Yassa Poulet</label>
+        </div>
       </div>
 
       <div class="form-group">
@@ -180,14 +179,11 @@
         <textarea id="requests" name="requests" placeholder="Ex : sans piment..."></textarea>
       </div>
 
-      <!-- Boutons de commande -->
-      <button type="submit" class="btn-commande">Commander</button>
+      <!-- Bouton unique -->
       <button type="button" class="btn-commande" onclick="envoyerWhatsApp()">Commander via WhatsApp</button>
-      <!-- Le script.js contient la fonction envoyerWhatsApp() -->
     </form>
   </div>
-   </section>
+</section>
 
-    
-  </body>
+    </body>
 </html>
