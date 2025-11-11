@@ -378,3 +378,145 @@ body {
     .noura-form textarea,
     .btn-commande { width: 100%; }
 }
+/* --- SECTION COMMANDE --- */
+#noura {
+  background-color: #fffaf5;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.commande-container {
+  max-width: 800px;
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.commande-container h2 {
+  text-align: center;
+  color: #d35400;
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+.commande-container p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.commande-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* --- MENU STYLÉ AVEC CASES À COCHER --- */
+.menu-selection h3 {
+  color: #d35400;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.menu-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid #eee;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.menu-item img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-item span {
+  padding: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+.menu-item input {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  accent-color: #d35400;
+}
+
+/* Effet au survol ou coché */
+.menu-item:hover, .menu-item input:checked + img {
+  transform: scale(1.03);
+  border-color: #d35400;
+  box-shadow: 0 0 10px rgba(211,84,0,0.3);
+}
+
+.btn-commande {
+  background-color: #d35400;
+  color: #fff;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-commande:hover {
+  background-color: #e67e22;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
+

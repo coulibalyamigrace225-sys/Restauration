@@ -128,62 +128,89 @@
         <h3>Plus qu'un restaurant, une passion</h3>
       </div>
     </div>
-    
-        <!-- COMMANDE -->
+    <!-- SECTION COMMANDE -->
 <section id="noura">
-  <div class="noura-container">
-    <h2>Commander votre plat</h2>
-    <p>Remplissez le formulaire ci-dessous pour commander votre repas.</p>
+  <div class="commande-container">
+    <h2>🍴 Passez votre commande</h2>
+    <p>Sélectionnez vos plats préférés et remplissez vos informations pour finaliser la commande.</p>
 
-    <form class="noura-form">
-      <div class="form-group">
-        <label for="name">Nom complet</label>
-        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+    <form class="commande-form">
+      <!-- Infos personnelles -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Nom complet</label>
+          <input type="text" id="name" placeholder="Votre nom" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Téléphone</label>
+          <input type="tel" id="phone" placeholder="Votre numéro" required>
+        </div>
       </div>
 
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Votre email" required>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="date" id="date" required>
+        </div>
+
+        <div class="form-group">
+          <label for="time">Heure</label>
+          <input type="time" id="time" required>
+        </div>
       </div>
 
-      <div class="form-group">
-        <label for="phone">Téléphone</label>
-        <input type="tel" id="phone" name="phone" placeholder="Votre numéro" required>
-      </div>
+      <!-- Menu à cocher stylé -->
+      <div class="menu-selection">
+        <h3>🥗 Choisissez vos plats</h3>
+        <div class="menu-grid">
+          <label class="menu-item">
+            <input type="checkbox" value="Tchep Poulet">
+            <img src="images/poulet.jpg" alt="Tchep Poulet">
+            <span>Tchep Poulet</span>
+          </label>
 
-      <div class="form-group">
-        <label for="date">Date</label>
-        <input type="date" id="date" name="date" required>
-      </div>
+          <label class="menu-item">
+            <input type="checkbox" value="Tchep Poisson">
+            <img src="images/poisson.jpg" alt="Tchep Poisson">
+            <span>Tchep Poisson</span>
+          </label>
 
-      <div class="form-group">
-        <label for="time">Heure</label>
-        <input type="time" id="time" name="time" required>
-      </div>
+          <label class="menu-item">
+            <input type="checkbox" value="Tchep Viande">
+            <img src="images/viande.jpg" alt="Tchep Viande">
+            <span>Tchep Viande</span>
+          </label>
 
-      <!-- Choix des plats avec checkboxes (plus pratique que select multiple) -->
-      <div class="form-group">
-        <label>Choisissez vos plats</label>
-        <div class="checkbox-group">
-          <label><input type="checkbox" name="menu" value="tchep_poulet"> 🍗 Tchep Poulet</label>
-          <label><input type="checkbox" name="menu" value="tchep_poisson"> 🐟 Tchep Poisson</label>
-          <label><input type="checkbox" name="menu" value="tchep_viande"> 🥩 Tchep Viande</label>
-          <label><input type="checkbox" name="menu" value="lak_onctueux"> 🥣 Lak Onctueux</label>
-          <label><input type="checkbox" name="menu" value="vermicelles"> 🍜 Vermicelles</label>
-          <label><input type="checkbox" name="menu" value="yassa"> 🍛 Yassa Poulet</label>
+          <label class="menu-item">
+            <input type="checkbox" value="Lak Onctueux">
+            <img src="images/lak.jpg" alt="Lak Onctueux">
+            <span>Lak Onctueux</span>
+          </label>
+
+          <label class="menu-item">
+            <input type="checkbox" value="Vermicelles">
+            <img src="images/vermicelles.jpg" alt="Vermicelles">
+            <span>Vermicelles</span>
+          </label>
+
+          <label class="menu-item">
+            <input type="checkbox" value="Yassa Poulet">
+            <img src="images/yassa.jpg" alt="Yassa Poulet">
+            <span>Yassa Poulet</span>
+          </label>
         </div>
       </div>
 
       <div class="form-group">
         <label for="requests">Demandes spéciales</label>
-        <textarea id="requests" name="requests" placeholder="Ex : sans piment..."></textarea>
+        <textarea id="requests" placeholder="Ex : sans piment, portion double..."></textarea>
       </div>
 
-      <!-- Bouton unique -->
-      <button type="button" class="btn-commande" onclick="envoyerWhatsApp()">Commander via WhatsApp</button>
+      <button type="button" class="btn-commande" onclick="envoyerWhatsApp()">📲 Commander via WhatsApp</button>
     </form>
   </div>
 </section>
 
-    </body>
+          </body>
 </html>
