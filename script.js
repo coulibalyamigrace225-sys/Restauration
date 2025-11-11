@@ -5,6 +5,7 @@ function envoyerWhatsApp() {
   const heure = document.getElementById("time").value;
   const demandes = document.getElementById("requests").value.trim();
 
+  // Récupère tous les plats cochés
   const plats = Array.from(document.querySelectorAll(".menu-item input:checked"))
     .map(p => p.value)
     .join(", ");
@@ -14,13 +15,13 @@ function envoyerWhatsApp() {
     return;
   }
 
-  const message = `🍽️ *Nouvelle Commande Mimi Restau*\n` +
+  const message = `🍽️ *Nouvelle Commande - Mimi Restau*\n` +
                   `────────────────────\n` +
                   `👤 *Nom:* ${nom}\n` +
                   `📞 *Téléphone:* ${tel}\n` +
                   `📅 *Date:* ${date || "-"}\n` +
                   `⏰ *Heure:* ${heure || "-"}\n` +
-                  `🥗 *Plats:* ${plats}\n` +
+                  `🥗 *Plats sélectionnés:* ${plats}\n` +
                   `📝 *Demandes spéciales:* ${demandes || "Aucune"}\n` +
                   `────────────────────\n` +
                   `Merci pour votre confiance 💛`;
