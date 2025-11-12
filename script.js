@@ -25,7 +25,7 @@ function envoyerWhatsApp() {
                   `────────────────────\n` +
                   `Merci pour votre confiance 💛`;
 
-  const numero = "2250709481800"; // Mets ton numéro WhatsApp ici
+  const numero = "2250709481800"; 
   const url = `https://wa.me/${numero}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
 }
